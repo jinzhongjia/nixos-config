@@ -3,7 +3,7 @@
 {
     users.users.jin = {
       isNormalUser = true;
-      # description = "jin";
+      description = "here is jin";
       extraGroups = [ "networkmanager" "wheel" ];
       shell = pkgs.zsh;
       packages = with pkgs; [

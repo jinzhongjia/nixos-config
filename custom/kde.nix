@@ -12,7 +12,6 @@
         enable = true;
         # Use systemd to manage the Plasma session
         runUsingSystemd = true;
-        # Enable support for running the Plasma Mobile shell. 
     };
 
     # Enable touchpad support (enabled default in most desktopManager).
