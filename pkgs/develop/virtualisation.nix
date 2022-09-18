@@ -12,11 +12,11 @@
         host.addNetworkInterface= true;
     };
     # 这里放置应该在vbox用户组的成员
-    users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+    users.extraGroups.vboxusers.members = [ "jin" ];
 
     # docker
     virtualisation.docker.enable = true;
     # 放置应该放在docker组的成员
-    users.extraGroups.docker.members = [ "user-with-access-to-virtualbox" ];
+    users.extraGroups.docker.members = [ "jin" ];
     # TODO 配置docker compose
 }

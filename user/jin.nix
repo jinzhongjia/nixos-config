@@ -3,8 +3,8 @@
 {
     users.users.jin = {
     isNormalUser = true;
-    description = "hello,jin";
-    extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
+    # description = "jin";
+    extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
@@ -62,6 +62,8 @@
       nur.repos.linyinfeng.icalingua-plus-plus # incalingua++
 
       nur.repos.linyinfeng.wemeet # 腾讯会议
+
+      # nur.repos.xddxdd.dingtalk
     ];
   };
 }
