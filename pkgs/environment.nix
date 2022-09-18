@@ -3,9 +3,9 @@
 
 {
     environment.systemPackages =with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     zsh
-    ntfs3g
+    ntfs3g #微软NTFS文件系统支持
     wget
     git
     neofetch
@@ -16,30 +16,8 @@
     docker-compose
     gcc
 
-    emacs28Packages.company-anaconda
-
-    # support both 32- and 64-bit applications
-    wineWowPackages.stable
-
-    # support 32-bit only
-    wine
-
-    # support 64-bit only
-    (wine.override { wineBuild = "wine64"; })
-
-    # wine-staging (version with experimental features)
-    wineWowPackages.staging
-
-    # winetricks (all versions)
-    winetricks
-
-    # native wayland support (unstable)
-    # wineWowPackages.waylandFull
-
     android-tools
 
     lolcat
-
-    nur.repos.shadowrz.klassy # kde主题
   ];
 }
