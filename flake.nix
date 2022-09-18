@@ -18,7 +18,7 @@
       system = "x86_64-linux";
     in
     {
-    nixosConfigurations.newland = nixpkgs.lib.nixosSystem {
+    nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       inherit system;
 
       modules = [
