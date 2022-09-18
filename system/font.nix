@@ -26,6 +26,7 @@
               ]; 
           }
         )
+      nur.repos.rewine.ttf-wps-fonts # wps补全字体
     ];
   };
 }

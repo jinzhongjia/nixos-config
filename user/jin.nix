@@ -44,6 +44,7 @@
      
       # nur.repos.xddxdd.dingtalk # 钉钉
       libreoffice-qt # kde专用
+      wpsoffice-cn # wpsoffice cn
 
       vnote
 
