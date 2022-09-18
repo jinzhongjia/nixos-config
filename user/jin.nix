@@ -63,7 +63,7 @@
 
       nur.repos.linyinfeng.wemeet # 腾讯会议
 
-      # nur.repos.xddxdd.dingtalk
+      # nixos-cn.dingtalk
     ];
   };
 }
