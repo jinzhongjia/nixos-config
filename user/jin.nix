@@ -59,13 +59,12 @@
 
         obs-studio
 
-        nur.repos.xddxdd.qbittorrent-enhanced-edition
+        qbittorrent
 
         nur.repos.linyinfeng.icalingua-plus-plus # incalingua++
 
         nur.repos.linyinfeng.wemeet # 腾讯会议
 
-        nur.repos.xddxdd.dingtalk
       ];
     };
 }
