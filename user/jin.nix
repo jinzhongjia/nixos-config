@@ -57,6 +57,8 @@
         qjournalctl # GUI界面检索及查看系统日志
         remmina # 远程工具
 
+        obs-studio
+
         nur.repos.xddxdd.qbittorrent-enhanced-edition
 
         nur.repos.linyinfeng.icalingua-plus-plus # incalingua++
