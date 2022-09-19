@@ -28,7 +28,6 @@
 
         tdesktop
         discord 
-      
 
         vlc # vedio player
         deadbeef # audio player
