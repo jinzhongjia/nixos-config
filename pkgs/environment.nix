@@ -13,7 +13,6 @@
     nodePackages.pnpm
     go
 
-
     android-tools
 
     lolcat
