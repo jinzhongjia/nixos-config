@@ -8,10 +8,11 @@
 #       shell = pkgs.zsh;
       packages = with pkgs; [
         firefox
-        kate
+        
         google-chrome
         chromium
 
+        kate
         vscode
 
         postman
@@ -20,7 +21,6 @@
 
         jetbrains.goland
         jetbrains.clion
-        cmake
         jetbrains.pycharm-professional
         conda
 
@@ -41,8 +41,6 @@
         libsForQt5.ark # kde配套解压工具
         libsForQt5.kdenlive # 视频剪辑工具
 
-     
-        # nur.repos.xddxdd.dingtalk # 钉钉
         libreoffice-qt # kde专用
         wpsoffice-cn # wpsoffice cn
 
