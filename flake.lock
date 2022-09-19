@@ -18,16 +18,14 @@
     "nixos-cn": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1663469495,
-        "narHash": "sha256-AC0S9QDLftxOdq0gBd47ruV5Up9xRzMjvvb7LORuoG8=",
+        "lastModified": 1663555799,
+        "narHash": "sha256-U3VgjM4xUnx95EG7uxxQcNxr9WqYJ4i0xCDC5YeeJa0=",
         "owner": "nixos-cn",
         "repo": "flakes",
-        "rev": "6c706dfebb0c802e4cbbbfdac61c865647a4b431",
+        "rev": "bb9dfea004d7e2995b9d29a81d02e658e488c237",
         "type": "github"
       },
       "original": {
@@ -38,11 +36,27 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1663357389,
-        "narHash": "sha256-oYA2nVRSi6yhCBqS5Vz465Hw+3BQOVFEhfbfy//3vTs=",
+        "lastModified": 1642104392,
+        "narHash": "sha256-m71b7MgMh9FDv4MnI5sg9MiBVW6DhE1zq+d/KlLWSC8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "da6a05816e7fa5226c3f61e285ef8d9dfc868f3c",
+        "rev": "5aaed40d22f0d9376330b6fa413223435ad6fee5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1663494472,
+        "narHash": "sha256-fSowlaoXXWcAM8m9wA6u+eTJJtvruYHMA+Lb/tFi/qM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f677051b8dc0b5e2a9348941c99eea8c4b0ff28f",
         "type": "github"
       },
       "original": {
@@ -54,11 +68,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1663538439,
-        "narHash": "sha256-4+Ktf5QmW0OYBjFqrHwSEbGGFTDGY7yz/sEaUdrUjGE=",
+        "lastModified": 1663566427,
+        "narHash": "sha256-o/HPAeGwKfqimJp6msJrOYE2kdchJrkufDzmL69ZYDM=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "c1a12b4767683572ee1f97f8dffdf14c2b04b42f",
+        "rev": "7272949a3448e0a70f820aa23e24c5adb436c4a9",
         "type": "github"
       },
       "original": {
@@ -70,7 +84,7 @@
     "root": {
       "inputs": {
         "nixos-cn": "nixos-cn",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nur": "nur"
       }
     }

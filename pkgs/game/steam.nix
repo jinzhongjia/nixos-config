@@ -1,4 +1,4 @@
-{ pkgs, lib, nixpkgs, ... }:
+{ config, pkgs, lib, modulesPath, inputs, nixpkgs, ... }:
 
 {
     programs.steam = {
@@ -7,18 +7,18 @@
         dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     };
 
-    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-        "steam"
-        "steam-original"
-        "steam-runtime"
-    ];
-
     # Adding missing dependencies
-    nixpkgs.config.packageOverrides =nixpkgs.config.packageOverrides // (pkgs: {
+    nixpkgs.config.packageOverrides = (pkgs: {
         steam = pkgs.steam.override {
             extraPkgs = pkgs: with pkgs; [
                 libgdiplus
             ];
         };
     });
+
+    # Java
+    programs.java.enable = true; 
+    environment.systemPackages = with pkgs; [
+        (steam.override { withJava = true; })
+    ];
 }

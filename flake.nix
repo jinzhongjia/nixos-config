@@ -8,12 +8,12 @@
     # NUR 的源
     nur = {
       url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
+#       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-cn = {
       url = "github:nixos-cn/flakes";
       # 强制 nixos-cn 和该 flake 使用相同版本的 nixpkgs
-      inputs.nixpkgs.follows = "nixpkgs";
+#       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

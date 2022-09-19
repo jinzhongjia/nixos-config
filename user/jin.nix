@@ -1,11 +1,11 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 {
     users.users.jin = {
       isNormalUser = true;
-      # description = "here is jin";
+      description = "金中甲";
       extraGroups = [ "networkmanager" "wheel" ];
-      shell = pkgs.zsh;
+#       shell = pkgs.zsh;
       packages = with pkgs; [
         firefox
         kate
@@ -50,7 +50,6 @@
 
         libsForQt5.kdeconnect-kde
 
-        (steam.override { withJava = true; })
         protontricks # proton工具
         lutris # 游戏整合平台
 

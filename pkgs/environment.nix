@@ -7,7 +7,6 @@
     zsh
     ntfs3g #微软NTFS文件系统支持
     wget
-    git
     neofetch
 
     nodejs
