@@ -3,7 +3,7 @@
 {
   system.autoUpgrade = {
     enable = true;
-    dates = "04:40";
+    dates = "03:30";
     rebootWindow = {
       lower = "01:00";
       upper = "05:00";
