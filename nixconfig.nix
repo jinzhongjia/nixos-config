@@ -21,8 +21,8 @@
         gc = {
             # 开启自动回收垃圾,generations
             automatic = true;
-            options = "--delete-older-than 5d";
-            dates = "weekly";
+            options = "--delete-older-than 3d";
+            dates = "02:30";
         };
 
         extraOptions = ''
