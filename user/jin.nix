@@ -5,7 +5,7 @@
       isNormalUser = true;
       description = "金中甲";
       extraGroups = [ "networkmanager" "wheel" ];
-#       shell = pkgs.zsh;
+      shell = pkgs.zsh;
       packages = with pkgs; [
         firefox
         
@@ -63,4 +63,6 @@
 
       ];
     };
+
+    programs.zsh.enable = true;
 }
