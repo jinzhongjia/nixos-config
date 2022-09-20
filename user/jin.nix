@@ -12,7 +12,6 @@
         google-chrome
         chromium
 
-        kate
         vscode
 
         postman
@@ -34,18 +33,15 @@
 #       cava
 #       termusic 音乐专用的终端ui
         calibre # Comprehensive e-book software
-        gwenview
-        gimp
+        
+        gimp # 图片编辑工具
 
-        libsForQt5.ark # kde配套解压工具
-        libsForQt5.kdenlive # 视频剪辑工具
+        shotcut # 视频剪辑工具
 
         libreoffice-qt # kde专用
         wpsoffice-cn # wpsoffice cn
 
         vnote
-
-        libsForQt5.kdeconnect-kde
 
         protontricks # proton工具
         lutris # 游戏整合平台
@@ -57,6 +53,8 @@
 
         qbittorrent
 
+        bless # 十六进制编辑器
+        ghidra # 逆向工具
         nur.repos.linyinfeng.icalingua-plus-plus # incalingua++
 
         nur.repos.linyinfeng.wemeet # 腾讯会议

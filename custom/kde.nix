@@ -1,4 +1,4 @@
-{...}:
+{ config, pkgs, lib, ... }:
 
 {
     # Enable the X11 windowing system.
@@ -22,4 +22,18 @@
         layout = "cn";
         xkbVariant = "";
     };
+    environment.systemPackages =with pkgs; [
+        libsForQt5.ark # kde配套解压工具
+        unar
+        lrzip
+        lzop
+        p7zip
+        unrar
+
+        kate
+
+        gwenview
+
+        libsForQt5.kdeconnect-kde
+    ];
 }
