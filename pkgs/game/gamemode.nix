@@ -2,4 +2,8 @@
 
 {
     programs.gamemode.enable = true;
+
+    environment.variables = {
+        GAMEMODERUNEXEC = "nvidia-offload";
+    };
 }
