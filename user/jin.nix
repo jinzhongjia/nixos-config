@@ -56,6 +56,7 @@
       bless # 十六进制编辑器
       ghidra # 逆向工具
 
+      # neovim
       neovim
       ripgrep
       fd
