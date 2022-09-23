@@ -55,6 +55,13 @@
 
         bless # 十六进制编辑器
         ghidra # 逆向工具
+
+        lua
+
+        neovim
+        ripgrep
+        fd
+
         nur.repos.linyinfeng.icalingua-plus-plus # incalingua++
 
         nur.repos.linyinfeng.wemeet # 腾讯会议
