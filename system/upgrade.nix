@@ -12,6 +12,6 @@
     };
     # 暂时关闭效果
     #allowReboot = true;
-    channel = https://mirror.nju.edu.cn/nix-channels/nixos-unstable;
+    channel = "https://mirror.nju.edu.cn/nix-channels/nixos-unstable";
   };
 }

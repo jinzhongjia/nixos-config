@@ -1,10 +1,9 @@
-
 { config, pkgs, lib, ... }:
 
 {
-    environment.systemPackages =with pkgs; [
+  environment.systemPackages = with pkgs; [
     vim
-    ntfs3g #微软NTFS文件系统支持
+    ntfs3g # 微软NTFS文件系统支持
     wget
     neofetch
 

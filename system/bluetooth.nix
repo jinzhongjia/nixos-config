@@ -1,6 +1,6 @@
-{...}:
+{ ... }:
 
 {
-    # Enabling Bluetooth support
-    hardware.bluetooth.enable = true;
+  # Enabling Bluetooth support
+  hardware.bluetooth.enable = true;
 }

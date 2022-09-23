@@ -1,9 +1,5 @@
 { config, lib, pkgs, ... }:
 
 {
-    imports =
-    [
-        ./kde.nix
-        ./Nvidia.nix
-    ];
+  imports = [ ./kde.nix ./Nvidia.nix ];
 }

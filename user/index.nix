@@ -1,7 +1,5 @@
-{config, lib, pkgs, ...}:
+{ config, lib, pkgs, ... }:
 
 {
-    imports =[
-        ./jin.nix
-    ];
+  imports = [ ./jin.nix ];
 }
