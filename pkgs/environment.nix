@@ -14,7 +14,7 @@
     go
     clang
     cmake
-
+    lua
     android-tools
 
     lolcat
