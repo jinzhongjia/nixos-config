@@ -12,6 +12,8 @@
     nodejs
     nodePackages.pnpm
     go
+    clang
+    cmake
 
     android-tools
 
