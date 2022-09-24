@@ -60,6 +60,8 @@
       neovim
       ripgrep
       fd
+      tree-sitter
+      xclip
 
       # language server
       gopls # go
