@@ -14,6 +14,7 @@
     clang
     cmake
     lua
+    python37
     android-tools
 
     lolcat

@@ -85,6 +85,9 @@
       buf # proto
       nixfmt # nix
 
+      # debug
+      delve
+
       nur.repos.linyinfeng.icalingua-plus-plus # incalingua++
 
       nur.repos.linyinfeng.wemeet # 腾讯会议
