@@ -11,12 +11,16 @@
     nodejs
     nodePackages.pnpm
     go
+    gotools
     clang
+    libclang
     cmake
     lua
     python37
     android-tools
+    ctags
 
+    tmux
     lolcat
   ];
 }
