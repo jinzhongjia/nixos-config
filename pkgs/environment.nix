@@ -22,5 +22,8 @@
 
     tmux
     lolcat
+    lazydocker
+    lazygit
+    glow
   ];
 }
