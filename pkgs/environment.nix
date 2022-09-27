@@ -25,5 +25,6 @@
     lazydocker
     lazygit
     glow
+    glances
   ];
 }
