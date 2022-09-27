@@ -25,6 +25,8 @@
 
       qtcreator
 
+      smartgithg
+
       tdesktop
       discord
 
@@ -86,6 +88,7 @@
       astyle # cpp
       buf # proto
       nixfmt # nix
+      codespell # Fix common misspellings in source code
 
       # debug
       delve
