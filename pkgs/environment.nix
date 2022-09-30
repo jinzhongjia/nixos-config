@@ -16,7 +16,7 @@
     libclang
     cmake
     lua
-    python37
+    python310
     android-tools
     ctags
 
