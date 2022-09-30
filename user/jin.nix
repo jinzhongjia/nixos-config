@@ -100,6 +100,7 @@
 
       # debug
       delve
+      gdb
       lldb
       # python310Packages.debugpy
 
