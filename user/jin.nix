@@ -100,7 +100,7 @@
 
       # debug
       delve
-      python310Packages.debugpy
+      # python310Packages.debugpy
 
       nur.repos.linyinfeng.icalingua-plus-plus # incalingua++
 
