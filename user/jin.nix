@@ -8,6 +8,7 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
+      thunderbird
 
       google-chrome
       chromium
@@ -27,13 +28,15 @@
 
       smartgithg
 
+      drawio # 好用免费的绘图工具
+
       tdesktop
       discord
 
       vlc # vedio player
       deadbeef # audio player
-      #       cava
-      #       termusic 音乐专用的终端ui
+      cava
+      termusic # 音乐专用的终端ui
       calibre # Comprehensive e-book software
 
       gimp # 图片编辑工具
@@ -51,6 +54,9 @@
       qjournalctl # GUI界面检索及查看系统日志
       remmina # 远程工具
 
+      github-desktop
+      gh # github-cli
+
       obs-studio
 
       qbittorrent
@@ -67,6 +73,8 @@
 
       # language server
       gopls # go
+      golangci-lint
+      golangci-lint-langserver
       nodePackages.vls # vue
       sumneko-lua-language-server # lua
       ccls # c/c++
@@ -97,7 +105,7 @@
 
       nur.repos.linyinfeng.wemeet # 腾讯会议
 
-      # nur.repos.xddxdd.dingtalk # 钉钉
+      nur.repos.xddxdd.dingtalk # 钉钉
 
     ];
   };
