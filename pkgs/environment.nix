@@ -10,6 +10,7 @@
     docker-compose
     nodejs
     nodePackages.pnpm
+    nodePackages.typescript
     go
     gotools
     clang
