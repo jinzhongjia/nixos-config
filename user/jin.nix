@@ -76,7 +76,7 @@
       golangci-lint
       golangci-lint-langserver
       nodePackages.typescript-language-server # tsserver
-      # nodePackages.eslint # eslint
+      nodePackages.eslint # eslint
       nodePackages.vscode-langservers-extracted # HTML/CSS/JSON/ESLint language servers
       nur.repos.bandithedoge.nodePackages.emmet-ls # emmet-ls
       nodePackages.vls # vue
@@ -91,7 +91,7 @@
       rnix-lsp # nix
 
       # formatter
-      # nodePackages.prettier
+      nodePackages.prettier
       shfmt # shell
       stylua # lua
       gofumpt # go
