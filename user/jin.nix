@@ -75,6 +75,7 @@
       gopls # go
       golangci-lint
       golangci-lint-langserver
+      nodePackages.vscode-langservers-extracted # HTML/CSS/JSON/ESLint language servers
       nodePackages.vls # vue
       sumneko-lua-language-server # lua
       ccls # c/c++
