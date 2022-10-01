@@ -10,8 +10,9 @@
       auto-optimise-store = true;
 
       substituters = [
-        "https://mirror.nju.edu.cn/nix-channels/store"
-        "https://cache.nixos.org/"
+        # "https://mirror.nju.edu.cn/nix-channels/store"
+        # "https://cache.nixos.org/"
+        "https://mirror.sjtu.edu.cn/nix-channels/store"
       ];
     };
 
