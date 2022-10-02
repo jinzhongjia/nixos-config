@@ -11,6 +11,7 @@
       thunderbird
 
       google-chrome
+      brave
       chromium
 
       vscode
@@ -73,8 +74,8 @@
 
       # language server
       gopls # go
-      golangci-lint
-      golangci-lint-langserver
+      # golangci-lint
+      # golangci-lint-langserver
       nodePackages.typescript-language-server # tsserver
       nodePackages.eslint # eslint
       nodePackages.vscode-langservers-extracted # HTML/CSS/JSON/ESLint language servers
