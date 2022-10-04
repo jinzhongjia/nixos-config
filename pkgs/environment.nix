@@ -13,8 +13,8 @@
     nodePackages.typescript
     go
     gotools
-    clang
-    libclang
+    gcc
+    gccStdenv
     cmake
     lua
     python310
@@ -27,5 +27,6 @@
     lazygit
     glow
     htop
+    bat
   ];
 }
