@@ -13,9 +13,9 @@
     nodePackages.typescript
     go
     gotools
-    gcc
-    gccStdenv
-    cmake
+    # clang
+    # clang-tools
+    # cmake
     lua
     python310
     android-tools

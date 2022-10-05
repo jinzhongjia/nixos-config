@@ -105,8 +105,8 @@
 
       # debug
       delve
-      gdb
       lldb
+      vscode-extensions.vadimcn.vscode-lldb
       # python310Packages.debugpy
 
       nur.repos.linyinfeng.icalingua-plus-plus # incalingua++
