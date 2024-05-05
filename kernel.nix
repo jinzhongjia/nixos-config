@@ -4,6 +4,6 @@
 
   boot.kernelPackages = pkgs.linuxPackages_xanmod;
   boot.kernelParams = [
-    "nowatchdogs"
+    "nowatchdog"
   ];
 }
