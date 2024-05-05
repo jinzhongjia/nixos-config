@@ -31,6 +31,7 @@
           ./fonts.nix
           ./network.nix
           ./i18n.nix
+          ./time.nix
           ./autoUpgrade.nix
           ./gc.nix
           ./users.nix
