@@ -27,6 +27,7 @@
           ./fonts.nix
           ./kernel.nix
           ./network.nix
+          ./autoUpgrade.nix
           ./configuration.nix
           ./hardware-configuration.nix
         ];
