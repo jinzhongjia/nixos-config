@@ -32,6 +32,7 @@
           ./network.nix
           ./i18n.nix
           ./autoUpgrade.nix
+          ./gc.nix
           ./users.nix
           ./configuration.nix
           ./hardware-configuration.nix
