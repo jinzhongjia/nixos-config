@@ -37,8 +37,15 @@
           ./gc.nix
           ./users.nix
           ./gnome.nix
-          ./configuration.nix
           ./hardware-configuration.nix
+          
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jin = import ./home/jin.nix;
+            home-manager.extraSpecialArgs = inputs;
+          }
         ];
       };
     };
