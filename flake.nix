@@ -24,6 +24,7 @@
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./meta.nix
           ./bootloader.nix
           ./kernel.nix
           ./fonts.nix
