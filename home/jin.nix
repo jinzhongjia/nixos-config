@@ -17,7 +17,7 @@
     winetricks
 
     google-chrome
-    firfox
+    firefox
     vlc
     ntfs3g
     vesktop
