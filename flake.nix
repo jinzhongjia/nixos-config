@@ -27,6 +27,7 @@
           ./meta.nix
           ./bootloader.nix
           ./kernel.nix
+          ./part.nix
           ./fonts.nix
           ./network.nix
           ./i18n.nix
