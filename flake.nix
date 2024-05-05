@@ -24,9 +24,10 @@
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./fonts.nix
           ./kernel.nix
+          ./fonts.nix
           ./network.nix
+          ./i18n.nix
           ./autoUpgrade.nix
           ./configuration.nix
           ./hardware-configuration.nix
