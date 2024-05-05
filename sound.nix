@@ -6,7 +6,9 @@
 
   # enable ALSA sound.
   sound.enable = true;
-
+  
+  hardware.pulseaudio.enable = false;
+  
   # Enable sound with pipewire.
   services.pipewire = {
     enable = true;
