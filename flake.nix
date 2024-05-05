@@ -25,6 +25,7 @@
         system = "x86_64-linux";
         modules = [
           ./fonts.nix
+          ./kernel.nix
           ./configuration.nix
           ./hardware-configuration.nix
         ];

@@ -15,9 +15,6 @@
       material-symbols
       # microsoft fonts
       corefonts
-      vistafonts-cht
-      vistafonts-chs
-      vistafonts
       maple-mono-SC-NF
       lxgw-wenkai
       wqy_zenhei
