@@ -32,6 +32,7 @@
           ./network.nix
           ./i18n.nix
           ./time.nix
+          ./sound.nix
           ./autoUpgrade.nix
           ./gc.nix
           ./users.nix
