@@ -26,6 +26,7 @@
         modules = [
           ./fonts.nix
           ./kernel.nix
+          ./network.nix
           ./configuration.nix
           ./hardware-configuration.nix
         ];
