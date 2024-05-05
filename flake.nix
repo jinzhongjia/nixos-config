@@ -29,6 +29,7 @@
           ./network.nix
           ./i18n.nix
           ./autoUpgrade.nix
+          ./users.nix
           ./configuration.nix
           ./hardware-configuration.nix
         ];
