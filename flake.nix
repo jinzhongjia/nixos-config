@@ -27,6 +27,7 @@
           ./meta.nix
           ./bootloader.nix
           ./kernel.nix
+          ./nvidia.nix
           ./part.nix
           ./fonts.nix
           ./network.nix
