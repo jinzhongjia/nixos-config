@@ -19,5 +19,5 @@
     clipboard-indicator
     no-overview
     appindicator
-  ];
+  ] ++ [pkgs.whitesur-gtk-theme];
 }
