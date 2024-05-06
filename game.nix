@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+
+  environment.systemPackages = with pkgs; [
+    lutris
+  ];
+
   # steam
   programs.steam = {
     enable = true;
