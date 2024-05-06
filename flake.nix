@@ -37,6 +37,7 @@
           ./autoUpgrade.nix
           ./gc.nix
           ./users.nix
+          ./proxy.nix
           ./gnome.nix
           ./hardware-configuration.nix
           
