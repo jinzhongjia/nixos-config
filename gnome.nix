@@ -18,5 +18,6 @@
     tray-icons-reloaded
     clipboard-indicator
     no-overview
+    appindicator
   ];
 }
