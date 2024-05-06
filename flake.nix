@@ -39,6 +39,7 @@
           ./users.nix
           ./proxy.nix
           ./gnome.nix
+          ./podman.nix
           ./hardware-configuration.nix
           
           home-manager.nixosModules.home-manager
