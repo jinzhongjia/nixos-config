@@ -39,6 +39,7 @@
           ./users.nix
           ./proxy.nix
           ./gnome.nix
+          ./game.nix
           ./podman.nix
           ./hardware-configuration.nix
           

@@ -4,10 +4,12 @@
     system.stateVersion = "23.11";
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
-
+    
     nix.settings.experimental-features = ["nix-command" "flakes"];
     
     xdg.portal.xdgOpenUsePortal = true;
+    
+    zramSwap.enable = true;
     
     environment.systemPackages = with pkgs; [
       vim
@@ -24,9 +26,15 @@
     services.xserver.enable = true;
     services.xserver.xkb.layout = "cn";
     
+    programs.git = {
+      enable = true;
+      prompt = {
+        enable = true;
+      };
+    };
+    
     # bash
     programs.bash = {
-      enable = true;
       enableCompletion = true;
       vteIntegration = true;
     };
