@@ -17,7 +17,6 @@
     winetricks
 
     google-chrome
-    firefox
     vlc
     ntfs3g
     vesktop
@@ -95,6 +94,11 @@
 
   programs.lazygit = {
     enable = true;
+  };
+  
+  programs.firefox = {
+    enable = true;
+    enableGnomeExtensions = true;
   };
 
   home.sessionVariables = {
