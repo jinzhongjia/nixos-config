@@ -17,6 +17,8 @@
     
     services.printing.enable = true;
     
+    services.thermald.enable = true;
+    
     services.xserver.enable = true;
     services.xserver.xkb.layout = "cn";
 }
