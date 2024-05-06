@@ -22,5 +22,6 @@
     clipboard-indicator
     no-overview
     appindicator
+    kimpanel
   ] ++ [pkgs.whitesur-gtk-theme];
 }
