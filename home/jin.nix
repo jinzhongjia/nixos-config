@@ -45,13 +45,6 @@
     extraConfig = builtins.readFile ./wezterm/config.lua;
   };
 
-  # bash
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-    enableVteIntegration = true;
-  };
-
   programs.vscode = {
     enable = true;
     package = pkgs.vscode.fhs;

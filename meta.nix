@@ -7,6 +7,8 @@
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
     
+    xdg.portal.xdgOpenUsePortal = true;
+    
     environment.systemPackages = with pkgs; [
       vim
       curl
@@ -21,4 +23,11 @@
     
     services.xserver.enable = true;
     services.xserver.xkb.layout = "cn";
+    
+    # bash
+    programs.bash = {
+      enable = true;
+      enableCompletion = true;
+      enableVteIntegration = true;
+    };
 }
