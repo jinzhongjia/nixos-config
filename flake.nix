@@ -13,13 +13,15 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    nur.url = github:nix-community/NUR;
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -50,6 +52,7 @@
             home-manager.users.jin = import ./home/jin.nix;
             home-manager.extraSpecialArgs = inputs;
           }
+          { nixpkgs.overlays = [ nur.overlay ]; }
         ];
       };
     };

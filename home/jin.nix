@@ -24,6 +24,7 @@
     qq
     yesplaymusic
     go-musicfox
+    nur.repos.xddxdd.qqmusic
   ];
 
   # git
