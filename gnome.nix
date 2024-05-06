@@ -15,7 +15,6 @@
     muteunmute
     vitals
     coverflow-alt-tab
-    quick-touchpad-toggle
     tray-icons-reloaded
     clipboard-indicator
     no-overview
