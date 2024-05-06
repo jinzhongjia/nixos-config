@@ -33,6 +33,12 @@
     userEmail = "mail@nvimer.org";
   };
 
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
+    enableVteIntegration = true;
+  };
+
   # starship
   programs.starship.enable = true;
 

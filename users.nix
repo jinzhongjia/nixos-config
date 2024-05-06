@@ -4,6 +4,7 @@
   users.users.jin = {
     isNormalUser = true;
     description = "jin";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode" ];
+    createHome = true;
   };
 }
