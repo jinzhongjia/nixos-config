@@ -3,7 +3,11 @@
 {
 
   environment.systemPackages = with pkgs; [
-    lutris
+    (lutris.override {
+      extraLibraries =  pkgs: [
+        vkd3d
+      ];
+    })
   ];
 
   # steam
