@@ -1,15 +1,6 @@
 { pkgs, ... }:
 
 {
-
-  environment.systemPackages = with pkgs; [
-    (lutris.override {
-      extraLibraries =  pkgs: [
-        vkd3d
-      ];
-    })
-  ];
-
   # steam
   programs.steam = {
     enable = true;
