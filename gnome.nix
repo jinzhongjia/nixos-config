@@ -19,7 +19,6 @@
     quick-settings-audio-panel
     muteunmute
     vitals
-    coverflow-alt-tab
     tray-icons-reloaded
     clipboard-indicator
     no-overview
@@ -35,4 +34,10 @@
   pkgs.catppuccin-gtk
   pkgs.gnome.gnome-tweaks
   ];
+
+  environment.gnome.excludePackages = with pkgs; [
+    xterm
+    gnome-tour
+  ];
+
 }
