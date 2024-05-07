@@ -1,6 +1,13 @@
 { pkgs, ... }:
 
 {
+
+  environment.systemPackages = with pkgs;[
+    lutris-unwrapped
+    bottles-unwrapped
+    protonplus
+  ];
+
   # steam
   programs.steam = {
     enable = true;
