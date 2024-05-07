@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-    environment.systemPackages = with pkgs; [
-        kmod
-    ];
+    boot.kernelModules = [ "tproxy" ];
     services.v2raya.enable = true;
 }
