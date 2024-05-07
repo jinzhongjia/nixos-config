@@ -17,7 +17,7 @@
     winetricks
 
     google-chrome
-    vlc
+
     ntfs3g
     vesktop
     telegram-desktop
@@ -25,6 +25,14 @@
     yesplaymusic
     go-musicfox
     nur.repos.xddxdd.qqmusic
+    pods
+
+# for gnome
+    mpv
+    celluloid
+    wike
+    geopard
+    fractal
   ];
 
   # git
@@ -63,11 +71,6 @@
 
   programs.hyfetch = {
     enable = true;
-  };
-
-  programs.thunderbird = {
-    enable = true;
-    profiles = { };
   };
 
   programs.obs-studio = {
