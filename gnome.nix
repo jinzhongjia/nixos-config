@@ -23,5 +23,8 @@
     no-overview
     appindicator
     kimpanel
+    fly-pie
+    just-perfection
+    touchpad-on-off
   ] ++ [pkgs.whitesur-gtk-theme];
 }
