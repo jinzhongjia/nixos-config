@@ -8,6 +8,8 @@
   # for gnome settings
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];  
 
+  services.sysprof.enable = true;
+
   # some gnome plugins
   environment.systemPackages = with pkgs.gnomeExtensions;[
     blur-my-shell
@@ -26,5 +28,11 @@
     fly-pie
     just-perfection
     touchpad-on-off
-  ] ++ [pkgs.whitesur-gtk-theme];
+    
+  ] ++ [
+  pkgs.colloid-gtk-theme
+  pkgs.whitesur-gtk-theme
+  pkgs.catppuccin-gtk
+  pkgs.gnome.gnome-tweaks
+  ];
 }
