@@ -11,6 +11,7 @@
   # You can import other NixOS modules here
   imports = with outputs.nixosModules; [
     meta
+    bootloader
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
 

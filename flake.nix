@@ -56,7 +56,7 @@ let
         modules = [
           ./nixos/config.nix
           # ./meta.nix
-          ./bootloader.nix
+          # ./bootloader.nix
           ./kernel.nix
           ./nvidia.nix
           ./part.nix
