@@ -28,12 +28,18 @@
     just-perfection
     touchpad-on-off
     
-  ] ++ [
-  pkgs.colloid-gtk-theme
-  pkgs.whitesur-gtk-theme
-  pkgs.catppuccin-gtk
-  pkgs.gnome.gnome-tweaks
-  ];
+  ] ++ (with pkgs;[
+  colloid-gtk-theme
+  whitesur-gtk-theme
+  catppuccin-gtk
+  gnome.gnome-tweaks
+  mpv
+  celluloid
+  wike
+  geopard
+  fractal
+
+  ]);
 
   environment.gnome.excludePackages = with pkgs; [
     xterm

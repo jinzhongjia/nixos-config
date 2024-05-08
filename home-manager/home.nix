@@ -44,13 +44,6 @@
     go-musicfox
     nur.repos.xddxdd.qqmusic
     pods
-
-# for gnome
-    mpv
-    celluloid
-    wike
-    geopard
-    fractal
   ];
 
   # git
