@@ -4,6 +4,14 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+
+  hardware.openrazer.enable = true;
+  hardware.openrazer.users = [ "jin" ];
+  environment.systemPackages = with pkgs; [
+    razergenie
+    polychromatic
+  ];
+
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
