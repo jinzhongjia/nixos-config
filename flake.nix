@@ -57,21 +57,21 @@ let
           ./nixos/config.nix
           # ./meta.nix
           # ./bootloader.nix
-          ./kernel.nix
+          # ./kernel.nix
           ./nvidia.nix
           ./part.nix
-          ./fonts.nix
-          ./network.nix
-          ./i18n.nix
-          ./time.nix
-          ./sound.nix
-          ./autoUpgrade.nix
-          ./gc.nix
+          # ./fonts.nix
+          # ./network.nix
+          # ./i18n.nix
+          # ./time.nix
+          # ./sound.nix
+          # ./autoUpgrade.nix
+          # ./gc.nix
           ./users.nix
-          ./proxy.nix
-          ./gnome.nix
-          ./game.nix
-          ./podman.nix
+          # ./proxy.nix
+          # ./gnome.nix
+          # ./game.nix
+          # ./podman.nix
           ./hardware-configuration.nix
           {nixpkgs.overlays = [nur.overlay];}
           nur.nixosModules.nur

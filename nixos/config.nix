@@ -12,6 +12,16 @@
   imports = with outputs.nixosModules; [
     meta
     bootloader
+    kernel 
+    bluetooth 
+    network 
+    time 
+    fonts 
+    i18n 
+    sound 
+    games 
+    podman 
+    gnome
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
 

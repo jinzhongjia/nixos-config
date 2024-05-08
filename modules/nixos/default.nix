@@ -11,6 +11,6 @@
   i18n = import ./i18n.nix;
   sound = import ./sound.nix;
   games = import ./games.nix;
-  padman = import ./padman.nix;
+  podman = import ./podman.nix;
   gnome = import ./gnome.nix;
 }
