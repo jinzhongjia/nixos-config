@@ -116,5 +116,6 @@
 
   home.sessionVariables = {
     EDITOR = "vim";
+    IsNixOS = 1;
   };
 }
