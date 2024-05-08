@@ -54,12 +54,11 @@ let
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./nixos/config.nix
+          ./nixos
           # ./meta.nix
           # ./bootloader.nix
           # ./kernel.nix
-          ./nvidia.nix
-          ./part.nix
+          # ./part.nix
           # ./fonts.nix
           # ./network.nix
           # ./i18n.nix
@@ -67,14 +66,12 @@ let
           # ./sound.nix
           # ./autoUpgrade.nix
           # ./gc.nix
-          ./users.nix
+          # ./users.nix
           # ./proxy.nix
           # ./gnome.nix
           # ./game.nix
           # ./podman.nix
-          ./hardware-configuration.nix
-          {nixpkgs.overlays = [nur.overlay];}
-          nur.nixosModules.nur
+          # ./hardware-configuration.nix
         ];
       };
     };

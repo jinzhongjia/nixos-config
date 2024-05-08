@@ -1,5 +1,3 @@
-# This is your system's configuration file.
-# Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
   inputs,
   outputs,
@@ -9,8 +7,11 @@
   ...
 }: {
   # You can import other NixOS modules here
-  imports = builtins.attrValues outputs.nixosModules ++ [
-
+  imports = (builtins.attrValues outputs.nixosModules) ++ [
+    ./users.nix
+    ./partition.nix
+    ./hardware.nix
+    ./nvidia.nix
   ];
 
   nixpkgs = {
