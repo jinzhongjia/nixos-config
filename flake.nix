@@ -55,7 +55,7 @@ let
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./nixos/config.nix
-          ./meta.nix
+          # ./meta.nix
           ./bootloader.nix
           ./kernel.nix
           ./nvidia.nix
