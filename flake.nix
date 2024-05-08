@@ -47,9 +47,14 @@ let
 
     overlays = import ./overlays {inherit inputs;};
 
-    nixosConfigurations = {
+    nixosModules = import ./modules/nixos;
+
+    homeManagerModules = import ./modules/home-manager;
+
+     nixosConfigurations = {
+      # FIXME replace with your hostname
       nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        specialArgs = {inherit inputs outputs;};
         modules = [
           ./meta.nix
           ./bootloader.nix
@@ -69,15 +74,22 @@ let
           ./game.nix
           ./podman.nix
           ./hardware-configuration.nix
-          
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.jin = import ./home/jin.nix;
-            home-manager.extraSpecialArgs = inputs;
-          }
-          { nixpkgs.overlays = [ nur.overlay ]; }
+          {nixpkgs.overlays = [nur.overlay];}
+          nur.nixosModules.nur
+        ];
+      };
+    };
+
+    homeConfigurations = {
+      # FIXME replace with your username@hostname
+      "jin@nixos" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/home.nix
+          {nixpkgs.overlays = [nur.overlay];}
+          nur.hmModules.nur
         ];
       };
     };
