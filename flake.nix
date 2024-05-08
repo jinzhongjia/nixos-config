@@ -56,6 +56,7 @@ let
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
+          ./nixos/config.nix
           ./meta.nix
           ./bootloader.nix
           ./kernel.nix
