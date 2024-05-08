@@ -23,16 +23,15 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
+  outputs = { self, nixpkgs, nur, home-manager, ... } @ inputs:
 let
     inherit (self) outputs;
-    # Supported systems for your flake packages, shell, etc.
     systems = [
       # "aarch64-linux"
       # "i686-linux"
-      "x86_64-linux"
       # "aarch64-darwin"
       # "x86_64-darwin"
+      "x86_64-linux"
     ];
     # This is a function that generates an attribute by calling a function you
     # pass to it, with each system as an argument
@@ -52,7 +51,6 @@ let
     homeManagerModules = import ./modules/home-manager;
 
      nixosConfigurations = {
-      # FIXME replace with your hostname
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
