@@ -55,29 +55,18 @@ let
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./nixos
-          # ./meta.nix
-          # ./bootloader.nix
-          # ./kernel.nix
-          # ./part.nix
-          # ./fonts.nix
-          # ./network.nix
-          # ./i18n.nix
-          # ./time.nix
-          # ./sound.nix
-          # ./autoUpgrade.nix
-          # ./gc.nix
-          # ./users.nix
-          # ./proxy.nix
-          # ./gnome.nix
-          # ./game.nix
-          # ./podman.nix
-          # ./hardware-configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jin = import ./home-manager/home.nix;
+            home-manager.extraSpecialArgs = {inherit inputs outputs;};
+          }
         ];
       };
     };
 
     homeConfigurations = {
-      # FIXME replace with your username@hostname
       "jin@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
