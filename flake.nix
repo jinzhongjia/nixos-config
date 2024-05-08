@@ -13,6 +13,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
+
     nur.url = github:nix-community/NUR;
 
     home-manager = {
@@ -21,7 +23,30 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
+let
+    inherit (self) outputs;
+    # Supported systems for your flake packages, shell, etc.
+    systems = [
+      # "aarch64-linux"
+      # "i686-linux"
+      "x86_64-linux"
+      # "aarch64-darwin"
+      # "x86_64-darwin"
+    ];
+    # This is a function that generates an attribute by calling a function you
+    # pass to it, with each system as an argument
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+  in
+
+ {
+
+    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+
+    overlays = import ./overlays {inherit inputs;};
+
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
