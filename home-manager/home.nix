@@ -8,9 +8,7 @@
 
 {
 
-  imports = with outputs.homeManagerModules;[
-    tools
-  ];
+  imports = builtins.attrValues outputs.homeManagerModules;
 
   home = {
     username = "jin";
