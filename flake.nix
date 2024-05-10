@@ -21,6 +21,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ags.url = "github:Aylur/ags";
+    hypridle.url = "github:hyprwm/hypridle";
+    hyprlock.url = "github:hyprwm/hyprlock";
+
   };
 
   outputs = { self, nixpkgs, nur, home-manager, ... } @ inputs:
