@@ -37,6 +37,7 @@
     go-musicfox
     nur.repos.xddxdd.qqmusic
     pods
+    neovim-nightly
 
   ];
 

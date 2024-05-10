@@ -15,12 +15,15 @@
 
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
 
-    nur.url = github:nix-community/NUR;
+    nur.url = "github:nix-community/NUR";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # for neovim nightly
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs = { self, nixpkgs, nur, home-manager, ... } @ inputs:

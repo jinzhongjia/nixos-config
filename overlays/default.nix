@@ -16,6 +16,14 @@ in
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
+
+    # vscode = prev.vscode.override {
+    #   commandLineArgs = electron-flags;
+    # };
+
+    # electron = prev.electron.override {
+    #   commandLineArgs = electron-flags;
+    # };
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
@@ -31,4 +39,6 @@ in
   };
 
   nur = inputs.nur.overlay;
+
+  neovim-nightly = inputs.neovim-nightly-overlay.overlay;
 }
