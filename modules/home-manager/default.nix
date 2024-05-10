@@ -5,4 +5,5 @@
   # my-module = import ./my-module.nix;
 
   tools = import ./tools.nix;
+  neovim = import ./neovim.nix;
 }
