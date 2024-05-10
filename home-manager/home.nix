@@ -1,9 +1,9 @@
-{ inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, outputs
+, lib
+, config
+, pkgs
+, ...
 }:
 
 {
@@ -72,7 +72,7 @@
   programs.obs-studio = {
     enable = true;
   };
-  
+
   programs.firefox = {
     enable = true;
   };
@@ -80,5 +80,6 @@
   home.sessionVariables = {
     EDITOR = "vim";
     IsNixOS = 1;
+    DIRENV_LOG_FORMAT = "";
   };
 }

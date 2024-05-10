@@ -6,7 +6,7 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # for gnome settings
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];  
+  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
   services.sysprof.enable = true;
 
@@ -27,17 +27,17 @@
     fly-pie
     just-perfection
     touchpad-on-off
-    
+
   ] ++ (with pkgs;[
-  colloid-gtk-theme
-  whitesur-gtk-theme
-  catppuccin-gtk
-  gnome.gnome-tweaks
-  mpv
-  celluloid
-  wike
-  geopard
-  fractal
+    colloid-gtk-theme
+    whitesur-gtk-theme
+    catppuccin-gtk
+    gnome.gnome-tweaks
+    mpv
+    celluloid
+    wike
+    geopard
+    fractal
 
   ]);
 

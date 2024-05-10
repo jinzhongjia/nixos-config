@@ -80,7 +80,7 @@
       };
 
 
-# This is for using nix direnv and flake develop environment
+      # This is for using nix direnv and flake develop environment
       devShells = forAllSystems (system: {
         default =
           let

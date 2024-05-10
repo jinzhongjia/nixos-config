@@ -19,7 +19,7 @@
       extraPkgs = pkgs: [ pkgs.wqy_zenhei ];
     };
   };
-  
+
   programs.gamemode = {
     enable = true;
     settings = {

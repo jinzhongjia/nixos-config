@@ -1,5 +1,5 @@
 # This file defines overlays
-{inputs, ...}: 
+{ inputs, ... }:
 let
   electron-flags = [
     "--password-store=gnome-libsecret"
