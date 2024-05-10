@@ -1,5 +1,14 @@
 # This file defines overlays
-{inputs, ...}: {
+{inputs, ...}: 
+let
+  electron-flags = [
+    "--password-store=gnome-libsecret"
+    "--enable-features=UseOzonePlatform"
+    "--ozone-platform=wayland"
+    "--enable-wayland-ime"
+  ];
+in
+{
   # This one brings our custom packages from the 'pkgs' directory
   additions = final: _prev: import ../pkgs final.pkgs;
 

@@ -24,59 +24,105 @@
   };
 
   outputs = { self, nixpkgs, nur, home-manager, ... } @ inputs:
-let
-    inherit (self) outputs;
-    systems = [
-      # "aarch64-linux"
-      # "i686-linux"
-      # "aarch64-darwin"
-      # "x86_64-darwin"
-      "x86_64-linux"
-    ];
-    # This is a function that generates an attribute by calling a function you
-    # pass to it, with each system as an argument
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-  in
+    let
+      inherit (self) outputs;
+      systems = [
+        # "aarch64-linux"
+        # "i686-linux"
+        # "aarch64-darwin"
+        # "x86_64-darwin"
+        "x86_64-linux"
+      ];
+      # This is a function that generates an attribute by calling a function you
+      # pass to it, with each system as an argument
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+    in
 
- {
+    {
 
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
 
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
-    overlays = import ./overlays {inherit inputs;};
+      overlays = import ./overlays { inherit inputs; };
 
-    nixosModules = import ./modules/nixos;
+      nixosModules = import ./modules/nixos;
 
-    homeManagerModules = import ./modules/home-manager;
+      homeManagerModules = import ./modules/home-manager;
 
-     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [
-          ./nixos
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.jin = import ./home-manager/home.nix;
-            home-manager.extraSpecialArgs = {inherit inputs outputs;};
-          }
-        ];
+      nixosConfigurations = {
+        nixos = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./nixos
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.jin = import ./home-manager/home.nix;
+              home-manager.extraSpecialArgs = { inherit inputs outputs; };
+            }
+          ];
+        };
       };
-    };
 
-    homeConfigurations = {
-      "jin@nixos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-          {nixpkgs.overlays = [nur.overlay];}
-          nur.hmModules.nur
-        ];
+      homeConfigurations = {
+        "jin@nixos" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [
+            # > Our main home-manager configuration file <
+            ./home-manager/home.nix
+            { nixpkgs.overlays = [ nur.overlay ]; }
+            nur.hmModules.nur
+          ];
+        };
       };
+
+
+      devShells = forAllSystems (system: {
+        default =
+          let
+            pkgs = import nixpkgs { inherit system; };
+          in
+          pkgs.mkShell {
+            packages = with pkgs; [
+              nixpkgs-fmt
+            ];
+          };
+      });
+
+      # devShells = forAllSystems (system: [
+      #   "${system}".default
+      #   (
+      #     let
+      #       pkgs = import nixpkgs {
+      #         system = "${system}";
+      #       };
+      #     in
+      #     pkgs.mkShell {
+      #       packages = with pkgs; [
+      #         nixpkgs-fmt
+      #       ];
+      #     }
+      #   )
+
+      # ]);
+
+
+      # devShells."x86_64-linux".default =
+      #   let
+      #     pkgs = import nixpkgs {
+      #       system = "x86_64-linux";
+      #     };
+      #   in
+      #   pkgs.mkShell {
+      #     packages = with pkgs; [
+      #       nixpkgs-fmt
+      #     ];
+      #   };
+
+
+
     };
-  };
 }
