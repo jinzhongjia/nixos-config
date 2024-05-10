@@ -91,38 +91,5 @@
             ];
           };
       });
-
-      # devShells = forAllSystems (system: [
-      #   "${system}".default
-      #   (
-      #     let
-      #       pkgs = import nixpkgs {
-      #         system = "${system}";
-      #       };
-      #     in
-      #     pkgs.mkShell {
-      #       packages = with pkgs; [
-      #         nixpkgs-fmt
-      #       ];
-      #     }
-      #   )
-
-      # ]);
-
-
-      # devShells."x86_64-linux".default =
-      #   let
-      #     pkgs = import nixpkgs {
-      #       system = "x86_64-linux";
-      #     };
-      #   in
-      #   pkgs.mkShell {
-      #     packages = with pkgs; [
-      #       nixpkgs-fmt
-      #     ];
-      #   };
-
-
-
     };
 }
