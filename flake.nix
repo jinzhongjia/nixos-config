@@ -80,6 +80,7 @@
       };
 
 
+# This is for using nix direnv and flake develop environment
       devShells = forAllSystems (system: {
         default =
           let
@@ -88,6 +89,7 @@
           pkgs.mkShell {
             packages = with pkgs; [
               nixpkgs-fmt
+              nil
             ];
           };
       });
