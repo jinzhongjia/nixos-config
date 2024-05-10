@@ -8,7 +8,7 @@
 
 {
 
-  imports = iwth outputs.homeManagerModules;[
+  imports = with outputs.homeManagerModules;[
     tools
   ];
 
