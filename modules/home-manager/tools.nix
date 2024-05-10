@@ -30,7 +30,7 @@
     enable = true;
   };
 
-  direnv = {
+  program.direnv = {
       enable = true;
       enableBashIntegration = true; # see note on other shells below
       nix-direnv.enable = true;
