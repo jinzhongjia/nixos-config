@@ -9,8 +9,14 @@
   programs.neovim = {
     enable = true;
     package = pkgs.neovim-nightly;
-    plugins = [
-      # pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+    defaultEditor = true;
+    withNodeJs = true;
+    withPython3 = true;
+    extraWrapperArgs = [
+      "--suffix"
+      "PATH"
+      ":"
+      "${lib.makeBinPath [ pkgs.gcc ]}"
     ];
   };
 }

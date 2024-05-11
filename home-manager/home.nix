@@ -35,6 +35,9 @@
     go-musicfox
     nur.repos.xddxdd.qqmusic
     pods
+
+    nixpkgs-fmt
+    nil
   ];
 
   # git
@@ -75,7 +78,6 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "vim";
     IsNixOS = 1;
     DIRENV_LOG_FORMAT = "";
   };
