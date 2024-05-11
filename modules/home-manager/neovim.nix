@@ -17,7 +17,7 @@
       "--suffix"
       "PATH"
       ":"
-      "${lib.makeBinPath [ pkgs.gcc ]}"
+      "${lib.makeBinPath [ pkgs.gcc pkgs.python3 ]}"
     ];
   };
 }
