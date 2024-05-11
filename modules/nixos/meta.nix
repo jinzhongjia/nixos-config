@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   system.stateVersion = "23.11";
@@ -52,4 +52,8 @@
     dates = "weekly";
     options = "--delete-older-than 14d";
   };
+
+  # make `nix run nixpkgs#nixpkgs` use the same nixpkgs as the one used by this flake.
+  nix.registry.nixpkgs.flake = inputs.nixpkgs;
+  nix.channel.enable = false;
 }
