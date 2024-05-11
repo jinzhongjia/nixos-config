@@ -26,6 +26,10 @@
     enable = true;
   };
 
+  programs.fd = {
+    enable = true;
+  };
+
   programs.z-lua = {
     enable = true;
   };
